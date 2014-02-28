@@ -177,7 +177,7 @@ public class MainActivity extends Activity {
 	        }
  			
  			try {
-        		out = new PrintWriter(new BufferedWriter(
+        			out = new PrintWriter(new BufferedWriter(
         				new OutputStreamWriter(socket.getOutputStream())),
         				true);
 
