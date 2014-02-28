@@ -29,32 +29,31 @@ import android.widget.TextView;
  */
 public class MainActivity extends Activity {
 	
-	private Socket socket;
-	private PrintWriter out;
-	
-	private TextView SERVER_PORT;
-	private TextView SERVER_IP;
-	// "10.32.95.167"; IP address of the RPi server
+	public final static String EXTRA_IP = "com.example.AndroidSYE.IP";
+	public final static String EXTRA_PORT = "com.example.AndroidSYE.PORT";
 	
 	/** Initialize the activity */
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState); // specify the layout resource defining the UI
-        setContentView(R.layout.activity_main);
-        
-        SERVER_PORT = (TextView) findViewById(R.id.portText);
-        SERVER_IP = (TextView) findViewById(R.id.ipText);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-    
-    /** Called when the user clicks the Connect button */
-    public void connect(View view) {
-    	new Thread(new ClientThread()).start();
-    }
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+	    super.onCreate(savedInstanceState); // specify the layout resource defining the UI
+	    setContentView(R.layout.activity_main);
+	}
+	
+        @Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+	    // Inflate the menu; this adds items to the action bar if it is present.
+	    getMenuInflater().inflate(R.menu.main, menu);
+	    return true;
+	}
+	    
+        /** Called when the user clicks the Connect button */
+        public void connect(View view) {
+	    	Intent intent = new Intent(this, ButtonActivity.class);
+	    	TextView ipText = (TextView) findViewById(R.id.ipAddress);
+		TextView portText = (TextView) findViewById(R.id.portNumber);
+		String ip = ipText.getText().toString();
+		String port = portText.getText().toString();
+		intent.putExtra(EXTRA_IP, ip);
+		intent.putExtra(EXTRA_PORT, port);
+	}
 }
