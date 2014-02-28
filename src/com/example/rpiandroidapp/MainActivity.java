@@ -159,7 +159,7 @@ public class MainActivity extends Activity {
  		    Function attempts to create a stream socket and connect it to the user-specified port number
  		    at the user-specified IP address */
  		@Override
-        public void run() {
+        	public void run() {
         			
  			try {
  				// get user-inputed IP address and port number from the TextViews
