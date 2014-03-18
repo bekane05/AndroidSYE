@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">RPiAndroidApp</string>
+    <string name="app_name">CarConnect</string>
     <string name="action_settings">Settings</string>
-    <string name="buttonConnect">Connect</string>
-    <string name="portNumber">Port Number</string>
-    <string name="ipAddress">IP Address</string>
-    <string name="title_activity_button">ButtonActivity</string>
-    <string name="forwardButton">Forward</string>
-    <string name="reverseButton">Reverse</string>
-    <string name="rightButton">Right</string>
-    <string name="leftButton">Left</string>
+    <string name="title_activity_control">Control</string>
+    <string name="title_activity_connect">CarConnect</string>
 
 </resources>
