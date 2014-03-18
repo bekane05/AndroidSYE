@@ -1,4 +1,4 @@
-AndroidSYE
-==========
+RPiAndroidApp
+=============
 
-Android application code to remotely control a Raspberry Pi powered RC car
+Android application code to remotely control a Raspberry Pi powered RC car 
